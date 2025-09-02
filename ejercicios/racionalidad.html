@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Racionales e Infinitos – Ejercicios</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>Ejercicios</h2>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../aprendiendo/index.html">Aprendiendo</a></li>
+        <li><a href="./index.html">Ejercicios</a></li>
+        <li><a href="./ruffini.html">Ruffini</a></li>
+        <li><a href="./indeterminacion.html">Indeterminaciones</a></li>
+        <li><a href="./laterales.html">Límites Laterales</a></li>
+        <li><a href="./racionalidad.html" class="active">Racionales / Infinitos</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <h1>Racionales e Infinitos</h1>
+    <section>
+      <p>Ejercicios con funciones racionales y límites en el infinito.</p>
+    </section>
+
+    <!-- Generador -->
+    <section>
+      <h2>Generar ejercicio</h2>
+      <form id="form-racional">
+        <label for="caso">Caso:</label>
+        <select id="caso">
+          <option value="grado-mayor">Grado mayor en numerador</option>
+          <option value="grado-menor">Grado menor en numerador</option>
+          <option value="grado-igual">Grados iguales</option>
+        </select>
+        <button type="button" id="btn-generar-racional">Generar</button>
+      </form>
+    </section>
+
+    <!-- Enunciado -->
+    <section>
+      <h2>Enunciado</h2>
+      <div id="enunciado-racional"></div>
+      <label for="respuesta-racional">Respuesta:</label>
+      <input id="respuesta-racional" type="text" placeholder="Ej: 0, ∞, -∞, coeficiente">
+      <button type="button" id="btn-verificar-racional">Verificar</button>
+    </section>
+
+    <!-- Gráfico -->
+    <section>
+      <h2>Gráfico</h2>
+      <div id="grafico-racional" style="width:100%;max-width:800px;height:420px;"></div>
+    </section>
+
+    <footer>
+      <p>Tip: compara los grados del numerador y denominador.</p>
+    </footer>
+  </main>
+
+  <!-- JS -->
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/generator.js"></script>
+  <script src="../assets/js/plotter_plotly.js"></script>
+  <script src="../assets/js/exercises.js"></script>
+</body>
+</html>

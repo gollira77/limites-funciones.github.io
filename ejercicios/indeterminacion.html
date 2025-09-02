@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indeterminaciones – Ejercicios</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>Ejercicios</h2>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../aprendiendo/index.html">Aprendiendo</a></li>
+        <li><a href="./index.html">Ejercicios</a></li>
+        <li><a href="./ruffini.html">Ruffini</a></li>
+        <li><a href="./indeterminacion.html" class="active">Indeterminaciones</a></li>
+        <li><a href="./laterales.html">Límites Laterales</a></li>
+        <li><a href="./racionalidad.html">Racionales / Infinitos</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <h1>Indeterminaciones</h1>
+    <section>
+      <p>Ejercicios con formas indeterminadas (0/0, ∞/∞).</p>
+    </section>
+
+    <!-- Generador -->
+    <section>
+      <h2>Generar ejercicio</h2>
+      <form id="form-indet">
+        <label for="familia">Familia:</label>
+        <select id="familia">
+          <option value="racionales">Racionales</option>
+          <option value="raices">Raíces</option>
+          <option value="trig">Trigonométricas</option>
+        </select>
+        <button type="button" id="btn-generar-indet">Generar</button>
+      </form>
+    </section>
+
+    <!-- Enunciado -->
+    <section>
+      <h2>Enunciado</h2>
+      <div id="enunciado-indet"></div>
+      <label for="respuesta-indet">Respuesta:</label>
+      <input id="respuesta-indet" type="text" placeholder="Ej: 2, ∞, no existe">
+      <button type="button" id="btn-verificar-indet">Verificar</button>
+    </section>
+
+    <!-- Gráfico -->
+    <section>
+      <h2>Gráfico</h2>
+      <div id="grafico-indet" style="width:100%;max-width:800px;height:420px;"></div>
+    </section>
+
+    <footer>
+      <p><em>Tip:</em> Si es 0/0, intenta factorizar; si es ∞/∞, compara los grados.</p>
+    </footer>
+  </main>
+
+  <!-- JS -->
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/generator.js"></script>
+  <script src="../assets/js/plotter_plotly.js"></script>
+  <script src="../assets/js/exercises.js"></script>
+</body>
+</html>

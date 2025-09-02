@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicios – Límites de Funciones</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2>Ejercicios</h2>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../aprendiendo/index.html">Aprendiendo</a></li>
+        <li><a href="./index.html" class="active">Ejercicios</a></li>
+        <li><a href="./ruffini.html">Ruffini</a></li>
+        <li><a href="./indeterminacion.html">Indeterminaciones</a></li>
+        <li><a href="./laterales.html">Límites Laterales</a></li>
+        <li><a href="./racionalidad.html">Racionales / Infinitos</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Contenido -->
+  <main class="content">
+    <h1>Ejercicios Interactivos</h1>
+    <section>
+      <p>Selecciona un tipo de ejercicio o usa el generador rápido para practicar con distintos niveles de dificultad.</p>
+    </section>
+
+    <!-- Generador -->
+    <section>
+      <h2>Generador rápido</h2>
+      <form id="form-generador-global">
+        <label for="nivel">Nivel:</label>
+        <select id="nivel">
+          <option value="facil">Fácil</option>
+          <option value="medio">Medio</option>
+          <option value="dificil">Difícil</option>
+        </select>
+
+        <label for="tipo">Tipo:</label>
+        <select id="tipo">
+          <option value="polinomial">Polinomial (Ruffini)</option>
+          <option value="indeterminacion">Indeterminación</option>
+          <option value="laterales">Laterales</option>
+          <option value="racional">Racional / Infinitos</option>
+        </select>
+
+        <button type="button" id="btn-generar-global">Generar</button>
+      </form>
+    </section>
+
+    <!-- Enunciado -->
+    <section>
+      <h2>Enunciado</h2>
+      <div id="enunciado-global"></div>
+
+      <label for="direccion-global">Dirección:</label>
+      <select id="direccion-global">
+        <option value="dos">Ambos lados</option>
+        <option value="izq">Izquierda</option>
+        <option value="der">Derecha</option>
+      </select>
+
+      <label for="respuesta-global">Tu respuesta:</label>
+      <input id="respuesta-global" type="text" placeholder="Ej: 3, ∞, no existe">
+      <button type="button" id="btn-verificar-global">Verificar</button>
+    </section>
+
+    <!-- Gráfico -->
+    <section>
+      <h2>Gráfico</h2>
+      <div id="grafico-global" style="width:100%;max-width:800px;height:420px;"></div>
+    </section>
+
+    <footer>
+      <p>© Proyecto Interactivo – Límites de Funciones</p>
+    </footer>
+  </main>
+
+  <!-- JS -->
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/generator.js"></script>
+  <script src="../assets/js/plotter_plotly.js"></script>
+  <script src="../assets/js/exercises.js"></script>
+</body>
+</html>
