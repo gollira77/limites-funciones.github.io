@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos para Calcular Límites</title>
+    <link rel="stylesheet" href="../assets/css/ejercicios.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <h2>Aprendiendo</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="introduccion.html">Introducción</a></li>
+                <li><a href="definicion-formal.html">Definición Formal</a></li>
+                <li><a href="metodos.html">Métodos</a></li>
+                <li><a href="ejemplos.html">Ejemplos</a></li>
+                <li><a href="../index.html">Volver al Inicio</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <h1>Métodos para Calcular Límites</h1>
+
+        <!-- Método 1: Sustitución directa -->
+        <section id="sustitucion">
+            <h2>Teoría: Método de Sustitución Directa</h2>
+            <p>
+                Se sustituye directamente el valor al que x tiende en la función, siempre que ésta sea continua.  
+                Es el método más simple para límites de funciones polinómicas, exponenciales o trigonométricas continuas.
+            </p>
+
+            <h2>Ejemplos</h2>
+
+            <!-- Ejemplo 1 -->
+            <p><strong>Ejemplo 1:</strong> lim<sub>x → 3</sub> (2x + 5)</p>
+            <ol>
+                <li>La función es un polinomio y continua → podemos sustituir directamente.</li>
+                <li>2·3 + 5 = 11 → límite = <strong>11</strong>.</li>
+            </ol>
+
+            <!-- Ejemplo 2 -->
+            <p><strong>Ejemplo 2:</strong> lim<sub>x → 0</sub> sin(x)</p>
+            <ol>
+                <li>sin(x) es continua en 0 → sustituimos directamente: sin(0) = 0</li>
+                <li>Por lo tanto, límite = <strong>0</strong>.</li>
+            </ol>
+
+            <!-- Ejemplo 3 -->
+            <p><strong>Ejemplo 3:</strong> lim<sub>x → 1</sub> e^x</p>
+            <ol>
+                <li>La función exponencial e^x es continua → sustituimos x = 1</li>
+                <li>e^1 = e → límite = <strong>e</strong></li>
+            </ol>
+        </section>
+
+        <!-- Método 2: Factorización / Ruffini -->
+        <section id="factorizacion">
+            <h2>Teoría: Factorización / Método de Ruffini</h2>
+            <p>
+                Se usa cuando sustituir directamente genera una indeterminación 0/0.  
+                Se factoriza el polinomio o se aplica Ruffini para simplificar y eliminar el factor que produce la indeterminación.
+            </p>
+
+            <h2>Ejemplos</h2>
+
+            <!-- Ejemplo 1 -->
+            <p><strong>Ejemplo 1:</strong> lim<sub>x → 2</sub> (x² - 4)/(x - 2)</p>
+            <ol>
+                <li>Sustituir x = 2 → 0/0 → indeterminación.</li>
+                <li>Factorizamos: x² - 4 = (x - 2)(x + 2)</li>
+                <li>Cancelamos x - 2 → queda x + 2</li>
+                <li>Sustituimos x = 2 → 4 → límite = <strong>4</strong></li>
+            </ol>
+
+            <!-- Ejemplo 2 -->
+            <p><strong>Ejemplo 2:</strong> lim<sub>x → 1</sub> (x³ - 1)/(x - 1)</p>
+            <ol>
+                <li>Sustituir x = 1 → 0/0</li>
+                <li>Factorizamos usando Ruffini: x³ - 1 = (x - 1)(x² + x + 1)</li>
+                <li>Cancelamos x - 1 → queda x² + x + 1</li>
+                <li>Sustituimos x = 1 → 1 + 1 + 1 = 3 → límite = <strong>3</strong></li>
+            </ol>
+
+            <!-- Ejemplo 3 -->
+            <p><strong>Ejemplo 3:</strong> lim<sub>x → -1</sub> (x² + 3x + 2)/(x + 1)</p>
+            <ol>
+                <li>Sustituir x = -1 → 0/0</li>
+                <li>Factorizamos: x² + 3x + 2 = (x + 1)(x + 2)</li>
+                <li>Cancelamos x + 1 → queda x + 2</li>
+                <li>Sustituimos x = -1 → -1 + 2 = 1 → límite = <strong>1</strong></li>
+            </ol>
+        </section>
+
+        <!-- Método 3: Racionalización -->
+        <section id="racionalizacion">
+            <h2>Teoría: Racionalización</h2>
+            <p>
+                Se aplica cuando hay raíces cuadradas que generan indeterminación 0/0.  
+                Multiplicamos por el conjugado para eliminar la raíz y simplificar.
+            </p>
+
+            <h2>Ejemplos</h2>
+
+            <!-- Ejemplo 1 -->
+            <p><strong>Ejemplo 1:</strong> lim<sub>x → 4</sub> (√x - 2)/(x - 4)</p>
+            <ol>
+                <li>Sustituir x = 4 → 0/0</li>
+                <li>Multiplicamos por el conjugado: (√x + 2)</li>
+                <li>Simplificamos: [(√x - 2)(√x + 2)] / [(x - 4)(√x + 2)] = (x - 4)/(x - 4)(√x + 2) = 1/(√x + 2)</li>
+                <li>Sustituimos x = 4 → 1/4 → límite = <strong>1/4</strong></li>
+            </ol>
+
+            <!-- Ejemplo 2 -->
+            <p><strong>Ejemplo 2:</strong> lim<sub>x → 9</sub> (√x - 3)/(x - 9)</p>
+            <ol>
+                <li>Sustituir x = 9 → 0/0</li>
+                <li>Multiplicamos por el conjugado: (√x + 3)</li>
+                <li>Simplificamos: (x - 9)/(x - 9)(√x + 3) = 1/(√x + 3)</li>
+                <li>Sustituimos x = 9 → 1/6 → límite = <strong>1/6</strong></li>
+            </ol>
+
+            <!-- Ejemplo 3 -->
+            <p><strong>Ejemplo 3:</strong> lim<sub>x → 1</sub> (√(x + 3) - 2)/(x - 1)</p>
+            <ol>
+                <li>Sustituir x = 1 → 0/0</li>
+                <li>Multiplicamos por el conjugado: (√(x + 3) + 2)</li>
+                <li>Simplificamos: [(x + 3) - 4]/[(x - 1)(√(x + 3) + 2)] = (x - 1)/[(x - 1)(√(x + 3) + 2)] = 1/(√(x + 3) + 2)</li>
+                <li>Sustituimos x = 1 → 1/(2 + 2) = 1/4 → límite = <strong>1/4</strong></li>
+            </ol>
+        </section>
+
+        <!-- Método 4: Límites laterales -->
+        <section id="laterales">
+            <h2>Teoría: Límites Laterales</h2>
+            <p>
+                Se estudian los límites desde la izquierda (x → a⁻) y desde la derecha (x → a⁺).  
+                Si coinciden, existe el límite; si no, el límite no existe.
+            </p>
+
+            <h2>Ejemplos</h2>
+
+            <!-- Ejemplo 1 -->
+            <p><strong>Ejemplo 1:</strong> lim<sub>x → 0</sub> |x|/x</p>
+            <ol>
+                <li>x → 0⁻ → |x|/x = -1</li>
+                <li>x → 0⁺ → |x|/x = 1</li>
+                <li>Los límites laterales no coinciden → límite no existe.</li>
+            </ol>
+
+            <!-- Ejemplo 2 -->
+            <p><strong>Ejemplo 2:</strong> lim<sub>x → 2</sub> (x² - 4)/(x - 2)</p>
+            <ol>
+                <li>Factorizamos: (x - 2)(x + 2)/(x - 2) → x + 2</li>
+                <li>Como x → 2⁻ y x → 2⁺ ambos dan 4 → límite = <strong>4</strong></li>
+            </ol>
+
+            <!-- Ejemplo 3 -->
+            <p><strong>Ejemplo 3:</strong> lim<sub>x → 1</sub> (x - 1)/|x - 1|</p>
+            <ol>
+                <li>x → 1⁻ → (x - 1)/|x - 1| = -1</li>
+                <li>x → 1⁺ → (x - 1)/|x - 1| = 1</li>
+                <li>Los límites laterales no coinciden → límite no existe.</li>
+            </ol>
+        </section>
+
+        <!-- Método 5: Límites al infinito -->
+        <section id="infinito">
+            <h2>Teoría: Límites al Infinito</h2>
+            <p>
+                Se estudia cómo se comporta la función cuando x crece mucho (x → ∞) o decrece mucho (x → -∞).  
+                Útil para determinar asíntotas horizontales o crecimiento de la función.
+            </p>
+
+            <h2>Ejemplos</h2>
+
+            <!-- Ejemplo 1 -->
+            <p><strong>Ejemplo 1:</strong> lim<sub>x → ∞</sub> (2x² + 3)/(x² - 1)</p>
+            <ol>
+                <li>Dividimos por x² (mayor potencia): (2 + 3/x²)/(1 - 1/x²)</li>
+                <li>Cuando x → ∞, 3/x² → 0 y 1/x² → 0</li>
+                <li>Queda 2/1 = 2 → límite = <strong>2</strong></li>
+            </ol>
+
+            <!-- Ejemplo 2 -->
+            <p><strong>Ejemplo 2:</strong> lim<sub>x → -∞</sub> (3x³ - x)/(x³ + 2x)</p>
+            <ol>
+                <li>Dividimos por x³: (3 - 1/x²)/(1 + 2/x²)</li>
+                <li>Cuando x → -∞ → 3/1 = 3 → límite = <strong>3</strong></li>
+            </ol>
+
+            <!-- Ejemplo 3 -->
+            <p><strong>Ejemplo 3:</strong> lim<sub>x → ∞</sub> 5x/(2x + 1)</p>
+            <ol>
+                <li>Dividimos numerador y denominador por x: 5/(2 + 1/x)</li>
+                <li>Cuando x → ∞, 1/x → 0 → 5/2 → límite = <strong>5/2</strong></li>
+            </ol>
+        </section>
+    </main>
+
+</body>
+</html>

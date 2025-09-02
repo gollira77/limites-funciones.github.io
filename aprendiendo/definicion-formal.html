@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Definición Formal de Límites</title>
+    <link rel="stylesheet" href="../assets/css/ejercicios.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <h2>Aprendiendo</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="introduccion.html">Introducción</a></li>
+                <li><a href="definicion-formal.html">Definición Formal</a></li>
+                <li><a href="metodos.html">Métodos</a></li>
+                <li><a href="ejemplos.html">Ejemplos</a></li>
+                <li><a href="../index.html">Volver al Inicio</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <h1>Definición Formal de Límites</h1>
+
+        <section id="teoria">
+            <h2>Teoría</h2>
+            <p>La <strong>definición formal de límite</strong> permite demostrar rigurosamente que una función f(x) se aproxima a un valor L cuando x se aproxima a a.</p>
+
+            <p>Se enuncia así:</p>
+            <p style="text-align:center; font-weight:bold;">
+                lim<sub>x → a</sub> f(x) = L
+            </p>
+            <p>Significa que:</p>
+            <p>
+                Para todo número positivo <strong>ε</strong> (epsilon), por muy pequeño que sea, existe un número positivo <strong>δ</strong> (delta) tal que, siempre que 0 &lt; |x - a| &lt; δ, se cumple |f(x) - L| &lt; ε.
+            </p>
+
+            <p>En otras palabras:</p>
+            <ul>
+                <li>ε representa la precisión deseada en el valor de la función.</li>
+                <li>δ representa cuán cerca debe estar x del punto a para garantizar esa precisión.</li>
+                <li>Si se puede encontrar un δ para cada ε, entonces el límite existe y es igual a L.</li>
+            </ul>
+
+            <p>Esta definición es la base de la <strong>rigor matemático</strong> en cálculo y permite demostrar límites de forma exacta, no solo aproximativa.</p>
+        </section>
+
+
+        <section id="ejemplos">
+            <h2>Ejemplos</h2>
+
+            <!-- Ejemplo 1: Límite simple usando epsilon-delta -->
+            <p><strong>Ejemplo 1: lim<sub>x → 2</sub> (3x + 1) = 7</strong></p>
+            <p><strong>Explicación paso a paso:</strong></p>
+            <ol>
+                <li>Queremos demostrar que para todo ε > 0 existe δ > 0 tal que |(3x + 1) - 7| &lt; ε siempre que 0 &lt; |x - 2| &lt; δ.</li>
+                <li>Calculamos |f(x) - L|: |(3x + 1) - 7| = |3x - 6| = 3|x - 2|</li>
+                <li>Queremos que 3|x - 2| &lt; ε → |x - 2| &lt; ε/3</li>
+                <li>Por lo tanto, podemos elegir δ = ε/3</li>
+                <li>Con esta elección, se cumple la definición formal: para cualquier ε > 0, si |x - 2| &lt; δ = ε/3, entonces |f(x) - 7| &lt; ε</li>
+            </ol>
+
+            <!-- Ejemplo 2: Límite cuadrático -->
+            <p><strong>Ejemplo 2: lim<sub>x → 1</sub> x² = 1</strong></p>
+            <p><strong>Explicación paso a paso:</strong></p>
+            <ol>
+                <li>Partimos de |f(x) - L| = |x² - 1| = |x - 1||x + 1|</li>
+                <li>Queremos |x - 1||x + 1| &lt; ε. Necesitamos controlar |x + 1|.</li>
+                <li>Podemos restringir δ ≤ 1 → entonces |x - 1| &lt; 1 → 0 &lt; x &lt; 2 → |x + 1| &lt; 3</li>
+                <li>Por lo tanto, |x - 1||x + 1| &lt; 3|x - 1| &lt; ε → necesitamos |x - 1| &lt; ε/3</li>
+                <li>Elegimos δ = min(1, ε/3). Con esto, se cumple la definición formal de límite.</li>
+            </ol>
+
+            <!-- Ejemplo 3: Límite lineal con explicación intuitiva -->
+            <p><strong>Ejemplo 3: lim<sub>x → 0</sub> 5x = 0</strong></p>
+            <p><strong>Explicación paso a paso:</strong></p>
+            <ol>
+                <li>|f(x) - L| = |5x - 0| = 5|x|</li>
+                <li>Queremos 5|x| &lt; ε → |x| &lt; ε/5</li>
+                <li>Entonces basta elegir δ = ε/5</li>
+                <li>Con esto, para cualquier ε > 0, si |x| &lt; δ, se cumple |5x - 0| &lt; ε → límite comprobado.</li>
+            </ol>
+        </section>
+    </main>
+</body>
+</html>

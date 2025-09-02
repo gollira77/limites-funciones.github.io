@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a Límites</title>
+    <link rel="stylesheet" href="../assets/css/ejercicios.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <h2>Aprendiendo</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="introduccion.html">Introducción</a></li>
+                <li><a href="definicion-formal.html">Definición Formal</a></li>
+                <li><a href="metodos.html">Métodos</a></li>
+                <li><a href="ejemplos.html">Ejemplos</a></li>
+                <li><a href="../index.html">Volver al Inicio</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <h1>Introducción a los Límites</h1>
+
+        <section id="teoria">
+            <h2>Teoría</h2>
+            <p>En cálculo, un <strong>límite</strong> describe el valor al que se aproxima una función cuando la variable independiente se acerca a un cierto punto.  
+            Es fundamental para entender el comportamiento de las funciones cerca de puntos críticos, y es la base para derivadas e integrales.</p>
+
+            <p>Formalmente, decimos que:</p>
+            <p>
+                <em>Si f(x) se acerca a L cuando x se aproxima a a, entonces el límite de f(x) cuando x tiende a a es L.</em>
+            </p>
+
+            <p>Se escribe matemáticamente como:</p>
+            <p style="text-align:center; font-weight:bold;">lim<sub>x → a</sub> f(x) = L</p>
+
+            <p>Algunos conceptos clave:</p>
+            <ul>
+                <li><strong>Límites laterales:</strong> El límite desde la izquierda (x → a⁻) y desde la derecha (x → a⁺) pueden diferir.</li>
+                <li><strong>Indeterminaciones:</strong> A veces al sustituir directamente obtenemos formas como 0/0 o ∞/∞, que requieren técnicas especiales.</li>
+                <li><strong>Límites infinitos:</strong> Cuando la función crece sin límite al acercarse a un punto o cuando x tiende a infinito.</li>
+            </ul>
+        </section>
+
+        <section id="ejemplos">
+            <h2>Ejemplos</h2>
+
+            <!-- Ejemplo 1 -->
+            <p><strong>Ejemplo 1: Límite de una función polinómica</strong></p>
+            <p style="text-align:center; font-weight:bold;">
+                lim<sub>x → 2</sub> (3x² + 2x - 1)
+            </p>
+            <p><strong>Explicación paso a paso:</strong></p>
+            <ol>
+                <li>Se trata de un polinomio. Los polinomios son continuos en todos los números reales, así que podemos <strong>sustituir directamente</strong> el valor de x.</li>
+                <li>Sustituimos x = 2: 3·(2)² + 2·(2) - 1</li>
+                <li>Calculamos paso a paso: 3·4 + 4 - 1 = 12 + 4 - 1 = 15</li>
+                <li>Por lo tanto, <strong>el límite es 15</strong>.</li>
+            </ol>
+
+            <!-- Ejemplo 2 -->
+            <p><strong>Ejemplo 2: Límite que requiere simplificación</strong></p>
+            <p style="text-align:center; font-weight:bold;">
+                lim<sub>x → 1</sub> (x² - 1)/(x - 1)
+            </p>
+            <p><strong>Explicación paso a paso:</strong></p>
+            <ol>
+                <li>Si sustituimos x = 1 directamente, obtenemos 0/0, lo que es una <strong>indeterminación</strong>. Esto significa que debemos simplificar la expresión antes de calcular el límite.</li>
+                <li>Factorizamos el numerador: x² - 1 = (x - 1)(x + 1)</li>
+                <li>Ahora la expresión queda: (x - 1)(x + 1) / (x - 1)</li>
+                <li>Cancelamos el factor común (x - 1): la expresión se simplifica a x + 1</li>
+                <li>Sustituimos x = 1: 1 + 1 = 2</li>
+                <li>Por lo tanto, <strong>el límite es 2</strong>.</li>
+            </ol>
+
+            <!-- Ejemplo 3 -->
+            <p><strong>Ejemplo 3: Límite lateral</strong></p>
+            <p style="text-align:center; font-weight:bold;">
+                lim<sub>x → 0⁺</sub> 1/x
+            </p>
+            <p><strong>Explicación paso a paso:</strong></p>
+            <ol>
+                <li>Este límite es lateral, indicado por 0⁺, lo que significa que x se aproxima a 0 <strong>desde valores positivos</strong>.</li>
+                <li>Cuando x es un número muy pequeño y positivo (0.1, 0.01, 0.001…), 1/x se hace cada vez más grande.</li>
+                <li>Por ejemplo: 1/0.1 = 10, 1/0.01 = 100, 1/0.001 = 1000…</li>
+                <li>Vemos que la función crece sin límite, por lo que decimos que el límite es <strong>+∞</strong>.</li>
+            </ol>
+
+            <!-- Ejemplo 4 (opcional para más detalle) -->
+            <p><strong>Ejemplo 4: Límite con sustitución y fracción</strong></p>
+            <p style="text-align:center; font-weight:bold;">
+                lim<sub>x → 3</sub> (2x² - 5x + 1)/(x - 3)
+            </p>
+            <p><strong>Explicación paso a paso:</strong></p>
+            <ol>
+                <li>Al sustituir x = 3, obtenemos 2·9 - 15 + 1 / (3-3) = (18 - 15 + 1)/0 = 4/0, que indica que el límite tiende a infinito o no existe. Debemos analizar el signo desde la izquierda y la derecha.</li>
+                <li>Desde la derecha (x → 3⁺), el numerador ≈ 4, el denominador es pequeño positivo → límite +∞</li>
+                <li>Desde la izquierda (x → 3⁻), el denominador es pequeño negativo → límite -∞</li>
+                <li>Como los límites laterales no coinciden, el límite en x = 3 <strong>no existe</strong>.</li>
+            </ol>
+        </section>
+    </main>
+</body>
+</html>
