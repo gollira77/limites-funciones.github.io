@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Medios - Indeterminación</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <aside class="sidebar">
+        <h2>Límites de Funciones</h2>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../aprendiendo/index.html">Aprendiendo</a></li>
+                <li><a href="index.html" class="active">Ejercicios</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <header>
+            <h1>Ejercicios: Nivel Medio</h1>
+            <p>Resuelve límites que resultan en indeterminaciones, como <em>0/0</em> y <em>∞/∞</em>. Deberás simplificar las funciones para encontrar el límite.</p>
+        </header>
+
+        <section id="exercise-container">
+            <h2 id="exercise-title">Ejercicio de Límite</h2>
+            
+            <div id="function-display">
+                <p>Cargando función...</p>
+            </div>
+            
+            <div id="plot-container" style="width: 100%; height: 500px;">
+            </div>
+            
+            <div id="input-container">
+                <div>
+                    <label for="user-answer">Límite =</label>
+                    <input type="text" id="user-answer" placeholder="Ingresa tu respuesta">
+                    <button id="check-button">Verificar</button>
+                    <button id="next-button" style="display: none;">Siguiente</button>
+                </div>
+            </div>
+            
+            <div id="feedback-message" role="status" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/generator.js"></script>
+    <script src="../assets/js/plotter_plotly.js"></script>
+    <script src="../assets/js/exercises.js"></script>
+</body>
+</html>

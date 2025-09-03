@@ -1,0 +1,91 @@
+/* Reset y estilos generales */
+:root {
+    --primary-color: #0077cc;
+    --secondary-color: #ffcc00;
+    --background-color: #ece2e2;
+    --text-color: #111;
+    --card-background: #fff;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* Encabezado */
+header {
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    color: var(--text-color);
+}
+
+/* Tarjetas de opción */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--card-background);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-decoration: none;
+    color: var(--text-color);
+    flex: 1 1 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+    font-size: 1.8em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* Pie de página */
+footer {
+    margin-top: 50px;
+    font-size: 0.9em;
+    color: #666;
+}
